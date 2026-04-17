@@ -5,7 +5,7 @@ Voxycast app
 
 If you ever encounter audio issues.
 Please see this video:
-https://youtu.be/eStaulbOxHk
+[here](https://youtu.be/eStaulbOxHk)
 
 
 ❓ VoxyCast – Q&A / Concerns
