@@ -1,120 +1,137 @@
-# Voxycast
-Voxycast app
+# 🎧 VoxyCast
 
-⚠ This is an early version (pre-release). Use with trusted people.
+**VoxyCast** is a lightweight, no-account voice chat app designed for **fast, private communication** with minimal system usage.
 
-If you ever encounter audio issues.
-Please see this video:
-[here](https://youtu.be/eStaulbOxHk)
+> ⚠️ **Pre-release version** — This is an early build. Use only with people you trust.
 
+---
 
-❓ VoxyCast – Q&A / Concerns
+## 🚨 Having Audio Issues?
 
-- Q: Is VoxyCast safe to use?
+If you encounter audio problems, please refer to this guide:  
+👉 [Watch troubleshooting video](https://youtu.be/eStaulbOxHk)
 
-**Yes, for private use with friends.**
+---
 
-**No** accounts
-**No** stored personal data
-**No** message logs
-**Voice is sent directly between users (peer-to-peer via WebRTC)**
+## ❓ VoxyCast – Q&A / Concerns
 
-**!** However:
+### 🔐 Is VoxyCast safe to use?
 
-**Anyone with a room code can join**
-**There is no password system yet**
+**Yes — for private use with trusted people.**
 
-👉 **Best used with people you trust.**
+VoxyCast does **not** include:
+- Accounts  
+- Stored personal data  
+- Message logs  
 
+Voice communication is handled via **peer-to-peer (WebRTC)**.
 
-- Q: Does VoxyCast record audio?
+⚠️ **Important:**
+- Anyone with a room code can join  
+- There is currently **no password protection**
 
-A: **No.**
+👉 Treat room codes as **private access keys**
 
-VoxyCast:
+---
 
-does **not** record voice
-does **not** store voice data
-does **not** upload audio to a server
+### 🎙️ Does VoxyCast record audio?
 
-**Voice is transmitted directly between users.**
-
-
-- Q: Can strangers join my room?
-
-A: **Only if they have the room code.**
-
-There is currently:
-
-**no** password protection
-**no** invite system
-
-👉 **Treat room codes like a private lobby code.**
-
-
-- Q: Is this a Discord replacement?
-
-A: **Not fully.**
-
-VoxyCast is designed to be:
-
-**lightweight**
-**low CPU/RAM usage**
-**focused only on voice chat**
-
-It does **NOT** include:
-
-messaging
-accounts
-servers
-friend lists
-
-
-- Q: Why use VoxyCast instead of Discord?
-
-A: **Main reasons:**
-
-runs on low-end PCs
-minimal resource usage
-simple and fast
-no background bloat
-
-**Perfect for:**
-
-gaming on weak hardware
-quick private voice sessions
-
-
-- Q: Is my data stored anywhere?
-
-A: **No.**
+**No.**
 
 VoxyCast:
+- Does **not** record voice  
+- Does **not** store audio data  
+- Does **not** upload voice to any server  
 
-does **not** store user data
-does **not** store conversations
-does **not** track users
+👉 Voice is transmitted **directly between users**
 
+---
 
-- Q: Can I use it publicly?
+### 🚪 Can strangers join my room?
 
-A: **Not recommended (yet).**
+**Only if they have the room code.**
 
-Current version is **best for**:
+Current limitations:
+- No password system  
+- No invite system  
 
-friends
-small private groups
+👉 Think of it like a **private game lobby code**
 
+---
 
-- Q: Is this app finished?
+### 🆚 Is this a Discord replacement?
 
-A: **No.**
+**Not entirely.**
 
-This is an **early** version (pre-release).
+VoxyCast is built to be:
+- Lightweight  
+- Low CPU / RAM usage  
+- Focused strictly on voice chat  
 
-**More** features and improvements **will come** over time.
+It does **not** include:
+- Messaging  
+- Accounts  
+- Servers  
+- Friend lists  
 
+---
 
-- **You can download the latest release** [here](https://github.com/BabyEvo/Voxycast/releases/tag/v0.1.1).
+### ⚡ Why use VoxyCast instead of Discord?
 
-- **If you run in some issues. Feel free to let me know and others using the app by creating a detailed issue in the Issue tab above or [here](https://github.com/BabyEvo/Voxycast/issues).**
+**Key advantages:**
+- Runs smoothly on low-end PCs  
+- Minimal resource usage  
+- Fast and simple  
+- No background bloat  
+
+✅ Ideal for:
+- Gaming on weaker hardware  
+- Quick private voice sessions  
+
+---
+
+### 🗄️ Is my data stored anywhere?
+
+**No.**
+
+VoxyCast:
+- Does **not** store user data  
+- Does **not** store conversations  
+- Does **not** track users  
+
+---
+
+### 🌐 Can I use it publicly?
+
+**Not recommended (yet).**
+
+Best suited for:
+- Friends  
+- Small private groups  
+
+---
+
+### 🚧 Is the app finished?
+
+**No.**
+
+This is an **early pre-release version**.  
+More features and improvements will be added over time.
+
+---
+
+## 📥 Download
+
+👉 **Get the latest version:**  
+[Download VoxyCast v0.1.1](https://github.com/BabyEvo/Voxycast/releases/tag/v0.1.1)
+
+---
+
+## 🛠️ Issues & Feedback
+
+Found a bug or have suggestions?
+
+👉 Open an issue here:  
+[GitHub Issues](https://github.com/BabyEvo/Voxycast/issues)
+
+Please include as much detail as possible to help improve the app.
