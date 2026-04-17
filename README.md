@@ -115,3 +115,4 @@ This is an **early** version (pre-release).
 **More** features and improvements **will come** over time.
 
 
+You can download the [https://github.com/BabyEvo/Voxycast/releases/tag/v0.1.1](Latest Release).
