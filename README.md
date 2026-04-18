@@ -134,7 +134,7 @@ Found a bug or have suggestions?
 👉 Open an issue here:  
 [GitHub Issues](https://github.com/BabyEvo/Voxycast/issues)
 
-👉 Access Official Discord Server for quick issue solving:
+👉 Access official discord server for quick issue solving:
 [VoxyCast Help Center](https://discord.gg/zB5NwawZ3p)
 
 Please include as much detail as possible to help improve the app.
