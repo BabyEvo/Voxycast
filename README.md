@@ -123,7 +123,7 @@ More features and improvements will be added over time.
 ## 📥 Download
 
 👉 **Get the latest version:**  
-[Download VoxyCast v0.1.1](https://github.com/BabyEvo/Voxycast/releases/tag/v0.1.1)
+[Download VoxyCast v1.0.0](https://github.com/BabyEvo/Voxycast/releases/tag/v1.0.0)
 
 ---
 
