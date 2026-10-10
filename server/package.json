@@ -1,0 +1,14 @@
+{
+  "name": "voxycast-server",
+  "version": "1.0.0",
+  "description": "Signaling server for VoxyCast",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "socket.io": "^4.8.1"
+  }
+}

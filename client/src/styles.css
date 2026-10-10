@@ -1,0 +1,685 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  background: transparent;
+  color: #ffffff;
+}
+
+body {
+  display: block;
+}
+
+.window {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  background: transparent;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #111827;
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.titlebar {
+  height: 46px;
+  min-height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px 0 14px;
+  background: #111827;
+  user-select: none;
+  -webkit-app-region: drag;
+  app-region: drag;
+}
+
+.titlebar-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.titlebar-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: #5865f2;
+  box-shadow: 0 0 10px rgba(88, 101, 242, 0.35);
+}
+
+.titlebar-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #dfe6f5;
+  letter-spacing: 0.2px;
+}
+
+.titlebar-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.no-drag,
+.no-drag * {
+  -webkit-app-region: no-drag;
+  app-region: no-drag;
+}
+
+.titlebar-btn {
+  width: 34px;
+  height: 28px;
+  border: none;
+  border-radius: 8px;
+  background: #1a2232;
+  color: #eef2ff;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.15s ease;
+}
+
+.titlebar-btn:hover {
+  background: #283247;
+}
+
+.close-btn:hover {
+  background: #d94b64;
+}
+
+.content {
+  flex: 1;
+  min-height: 0;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: hidden;
+  background: #111827;
+}
+
+h1 {
+  margin: 2px 0 0 0;
+  font-size: 30px;
+  text-align: center;
+}
+
+.subtitle {
+  margin: 0 0 8px 0;
+  text-align: center;
+  color: #aab4c5;
+  font-size: 14px;
+}
+
+.pre-room-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pre-room-section.hidden,
+.room-panel.hidden {
+  display: none;
+}
+
+#updateSection.hidden {
+  display: none;
+}
+
+input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #2a3040;
+  background: #0d131d;
+  color: #ffffff;
+  font-size: 14px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #5865f2;
+}
+
+.actions,
+.join,
+.voice-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.actions button,
+.join button,
+.leave-btn,
+.member-mute-btn {
+  padding: 12px 14px;
+  border: none;
+  border-radius: 10px;
+  background: #5865f2;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.15s ease, opacity 0.15s ease;
+}
+
+.actions button:hover,
+.join button:hover,
+.leave-btn:hover,
+.member-mute-btn:hover {
+  background: #4752c4;
+}
+
+.actions button,
+.leave-btn {
+  width: 100%;
+}
+
+.join input {
+  flex: 1;
+  min-width: 0;
+}
+
+.join button {
+  width: 120px;
+  flex-shrink: 0;
+}
+
+.room-panel {
+  flex: 1;
+  min-height: 0;
+  padding: 14px;
+  border-radius: 14px;
+  background: #0c121c;
+  border: 1px solid #20283a;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.room-line {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.label {
+  color: #aab4c5;
+  font-size: 13px;
+}
+
+#currentRoom {
+  font-weight: bold;
+  letter-spacing: 0.4px;
+}
+
+.member-list {
+  min-height: 24px;
+  max-height: 190px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.member-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 12px;
+  background: #111827;
+  border: 1px solid #20283a;
+}
+
+.member-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.member-name {
+  font-size: 14px;
+  color: #eef2ff;
+  font-weight: 600;
+}
+
+.member-self-tag {
+  font-size: 12px;
+  color: #9aa7c2;
+  font-weight: 400;
+  margin-left: 6px;
+}
+
+.member-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+.member-mute-btn {
+  padding: 8px 10px;
+  font-size: 12px;
+  min-width: 72px;
+}
+
+.placeholder {
+  color: #8d95a3;
+}
+
+.leave-btn:disabled,
+.member-mute-btn:disabled {
+  background: #353d50;
+  cursor: not-allowed;
+  opacity: 0.72;
+}
+
+.status {
+  margin: 0;
+  min-height: 18px;
+  font-size: 13px;
+  color: #c8cfdb;
+  text-align: center;
+}
+
+#remoteAudioContainer {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+
+.member-slider {
+  width: 120px;
+  height: 18px;
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.member-slider::-webkit-slider-runnable-track {
+  height: 6px;
+  background: #2a3040;
+  border-radius: 999px;
+}
+
+.member-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: #5865f2;
+  margin-top: -4px;
+  border: none;
+}
+
+.member-slider::-moz-range-track {
+  height: 6px;
+  background: #2a3040;
+  border-radius: 999px;
+  border: none;
+}
+
+.member-slider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: #5865f2;
+  border: none;
+}
+
+
+
+#remoteAudioContainer audio {
+  display: none;
+}
+
+/* =========================================
+   VoxyCast - Settings Interface
+   ========================================= */
+
+/* Main view and settings share available space */
+#mainView {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+#mainView.hidden,
+#settingsPanel.hidden {
+  display: none !important;
+}
+
+/* Make room panel work inside main view */
+#mainView .room-panel {
+  flex: 1;
+  min-height: 0;
+}
+
+/* Settings panel */
+.settings-panel {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  gap: 16px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 4px 5px 8px 0;
+  scrollbar-width: thin;
+  scrollbar-color: #353f57 transparent;
+}
+
+.settings-panel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.settings-panel::-webkit-scrollbar-thumb {
+  background: #353f57;
+  border-radius: 999px;
+}
+
+.settings-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.settings-heading h2 {
+  margin: 0;
+  color: #eef2ff;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+/* Settings categories */
+.settings-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px;
+  border: 1px solid #20283a;
+  border-radius: 14px;
+  background: #0c121c;
+}
+
+.settings-group h3 {
+  margin: 0 0 5px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #dfe6f5;
+}
+
+.settings-group > label {
+  font-size: 12px;
+  color: #aab4c5;
+  font-weight: 500;
+}
+
+/* Audio input/output selection */
+.settings-group select {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 11px 12px;
+  border: 1px solid #2a3040;
+  border-radius: 10px;
+  background: #111827;
+  color: #eef2ff;
+  font-family: inherit;
+  font-size: 13px;
+  outline: none;
+  cursor: pointer;
+}
+
+.settings-group select:focus {
+  border-color: #5865f2;
+}
+
+.settings-group select option {
+  background: #111827;
+  color: #ffffff;
+}
+
+/* Keybind buttons */
+.keybind-btn {
+  width: 100%;
+  min-height: 40px;
+  padding: 10px 12px;
+  border: 1px solid #353f57;
+  border-radius: 10px;
+  background: #111827;
+  color: #eef2ff;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.keybind-btn:hover {
+  background: #1a2538;
+  border-color: #5865f2;
+}
+
+.keybind-btn:focus-visible {
+  outline: 2px solid #5865f2;
+  outline-offset: 2px;
+}
+
+.keybind-btn.recording {
+  background: #222b4d;
+  border-color: #5865f2;
+  color: #cbd2ff;
+}
+
+/* General settings buttons */
+#backFromSettings,
+#refreshAudioDevices,
+.settings-btn {
+  padding: 10px 14px;
+  border: 1px solid #303a51;
+  border-radius: 10px;
+  background: #1a2232;
+  color: #eef2ff;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+
+#backFromSettings:hover,
+#refreshAudioDevices:hover,
+.settings-btn:hover {
+  background: #283247;
+  border-color: #5865f2;
+}
+
+#refreshAudioDevices {
+  width: 100%;
+}
+
+/* Sound settings */
+.settings-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.settings-toggle span {
+  font-size: 13px;
+  color: #eef2ff;
+}
+
+.settings-toggle input[type="checkbox"] {
+  appearance: auto;
+  -webkit-appearance: checkbox;
+  width: 17px;
+  height: 17px;
+  padding: 0;
+  margin: 0;
+  flex-shrink: 0;
+  accent-color: #5865f2;
+  cursor: pointer;
+}
+
+/* Help and device feedback */
+.settings-hint {
+  margin: 2px 0 0;
+  color: #8d9ab0;
+  font-size: 12px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+/* Settings navigation */
+.footer-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+
+.settings-btn {
+  min-width: 90px;
+}
+
+/* Button accessibility */
+.settings-panel button:disabled,
+.footer-controls button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* Compact window compatibility */
+@media (max-width: 420px) {
+  .settings-group {
+    padding: 12px;
+  }
+
+  .settings-panel {
+    gap: 12px;
+  }
+
+  .settings-heading h2 {
+    font-size: 17px;
+  }
+}
+
+
+/* =========================================
+   VoxyCast - Microphone Permission Recovery
+   ========================================= */
+
+.permission-recovery {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+  padding: 14px;
+  background: #111827;
+  border: 1px solid #303a51;
+  border-radius: 12px;
+}
+
+.permission-recovery-header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.permission-recovery-header strong {
+  color: #eef2ff;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.permission-recovery-header p {
+  margin: 0;
+  color: #9aa7c2;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.permission-reset-btn {
+  width: 100%;
+  min-height: 40px;
+  padding: 10px 12px;
+  border: 1px solid #5865f2;
+  border-radius: 10px;
+  background: rgba(88, 101, 242, 0.12);
+  color: #cbd2ff;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.permission-reset-btn:hover:not(:disabled) {
+  background: rgba(88, 101, 242, 0.25);
+  border-color: #7983ff;
+}
+
+.permission-reset-btn:focus-visible {
+  outline: 2px solid #7983ff;
+  outline-offset: 2px;
+}
+
+.permission-reset-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.permission-status {
+  margin: 0;
+  color: #9aa7c2;
+  font-size: 12px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.permission-status:empty {
+  display: none;
+}
+
+.permission-status.success {
+  color: #66d9a0;
+}
+
+.permission-status.error {
+  color: #ff8795;
+}
+
